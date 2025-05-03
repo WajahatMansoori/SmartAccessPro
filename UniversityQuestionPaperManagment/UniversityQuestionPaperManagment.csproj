@@ -171,6 +171,8 @@
     <Content Include="Views\Teacher\Dashboard.cshtml" />
     <Content Include="Views\Moderator\Dashboard.cshtml" />
     <Content Include="Views\Shared\_TeacherLayout.cshtml" />
+    <Content Include="Views\Teacher\CourseList.cshtml" />
+    <Content Include="Views\Shared\_TeacherInnerLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

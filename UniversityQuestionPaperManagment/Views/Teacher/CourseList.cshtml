@@ -1,0 +1,176 @@
+﻿@{
+    ViewBag.Title = "Course List";
+    Layout = "~/Views/Shared/_TeacherInnerLayout.cshtml";
+}
+
+<style>
+    .course-tabs {
+        background-color: #333;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+        .course-tabs .year-tab {
+            color: #fff;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            border-radius: 0;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+        }
+
+            .course-tabs .year-tab.active, .course-tabs .year-tab:hover {
+                background-color: #444;
+            }
+
+            .course-tabs .year-tab i {
+                margin-right: 8px;
+            }
+
+    .main-content {
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .content-header {
+        background-color: #555;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .course-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .course-item {
+        border-radius: 8px;
+        padding: 20px 15px;
+        text-align: center;
+        color: white;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 130px;
+        justify-content: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+    .icon-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .course-title {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 0;
+    }
+</style>
+
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="course-tabs">
+                <div class="year-tab active">
+                    <i class="fas fa-users"></i> CS/SE2020
+                </div>
+                <div class="year-tab">
+                    <i class="fas fa-users"></i> CS/SE2021
+                </div>
+                <div class="year-tab">
+                    <i class="fas fa-users"></i> CS/SE2022
+                </div>
+                <div class="year-tab">
+                    <i class="fas fa-users"></i> CS/SE2023
+                </div>
+                <div class="year-tab">
+                    <i class="fas fa-users"></i> CS/SE2024
+                </div>
+                <div class="year-tab">
+                    <i class="fas fa-users"></i> CS/SE2025
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <div class="main-content">
+                <div class="content-header">
+                    <h4 class="m-0">courses</h4>
+                </div>
+
+                <div class="course-grid">
+                    @{
+                        string[] courses = {
+                                        "ENGLISH", "PROGRAMMING FUNDAMENTAL", "SOFTWARE ENGINEERING", "PROFESSIONAL PRACTICES",
+                                        "ISLAMIAT", "PHYSICS", "OOP", "WEB DESIGNING",
+                                        "PARALLEL & DISTRIBUTED COMP", "URDU", "CLOUD COMPUTING", "MATHS",
+                                        "OPERATING SYSTEM", "PST", "DAA", "COMPILER"
+                                    };
+
+                        string[] colors = {
+                                        "#85C1E9", "#F1948A", "#ABEBC6", "#9b59b6",
+                                        "#f1c40f", "#1abc9c", "#e67e22", "#34495e",
+                                        "#7f8c8d", "#16a085", "#8e44ad", "#d35400",
+                                        "#2c3e50", "#27ae60", "#c0392b", "#2980b9"
+                                    };
+
+                        string[] icons = {
+                                        "fa-book", "fa-code", "fa-cogs", "fa-handshake",
+                                        "fa-mosque", "fa-atom", "fa-object-group", "fa-globe",
+                                        "fa-network-wired", "fa-language", "fa-cloud", "fa-square-root-alt",
+                                        "fa-desktop", "fa-sitemap", "fa-project-diagram", "fa-microchip"
+                                    };
+
+                        for (int i = 0; i < courses.Length; i++)
+                        {
+                            <div class="course-item" style="background-color: @colors[i]">
+                                <div class="icon-circle">
+                                    <i class="fas @icons[i]"></i>
+                                </div>
+                                <p class="course-title">@courses[i]</p>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            // Highlight active menu
+            $(".left-menu a[href*='CourseList']").addClass("active");
+
+            // Year tab selection
+            $(".year-tab").click(function () {
+                $(".year-tab").removeClass("active");
+                $(this).addClass("active");
+                // Here you would load courses for the selected year
+            });
+        });
+    </script>
+}

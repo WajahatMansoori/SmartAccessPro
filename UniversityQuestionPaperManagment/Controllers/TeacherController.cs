@@ -13,5 +13,10 @@ namespace UniversityQuestionPaperManagment.Controllers
         {
             return View();
         }
+
+        public ActionResult CourseList()
+        {
+            return View();
+        }
     }
 }
