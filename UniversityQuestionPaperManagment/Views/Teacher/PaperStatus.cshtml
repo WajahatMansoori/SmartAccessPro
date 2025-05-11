@@ -1,0 +1,205 @@
+﻿@{
+    ViewBag.Title = "paperstatus";
+    Layout = "~/Views/Shared/_TeacherInnerLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Status | SmartAccess Pro</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f6f8;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 220px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            flex-shrink: 0;
+        }
+
+            .sidebar h2 {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+
+            .sidebar a {
+                display: block;
+                padding: 12px 20px;
+                color: white;
+                text-decoration: none;
+                transition: background 0.3s;
+            }
+
+                .sidebar a:hover {
+                    background-color: #34495e;
+                }
+
+        /* Right Content Area */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            height: 60px;
+            background-color: white;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+            .search-box input {
+                width: 100%;
+                padding: 8px 12px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+            }
+
+        .notification {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+            table thead {
+                background-color: #2980b9;
+                color: white;
+            }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        tr:hover {
+            background-color: #f0f8ff;
+        }
+
+        .badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .approved {
+            background-color: green;
+        }
+
+        .pending {
+            background-color: orange;
+        }
+
+        .rejected {
+            background-color: red;
+        }
+
+        .uploaded {
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main -->
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Search papers, courses..." />
+            </div>
+            <div class="notification">
+                <span class="material-icons">notifications</span>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <h2>Paper Status</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paper ID</th>
+                        <th>Course</th>
+                        <th>Uploaded By</th>
+                        <th>Upload Date</th>
+                        <th>Status</th>
+                        <th>CLO Match</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>CS101</td>
+                        <td>Mr. Ali</td>
+                        <td>01-May-2025</td>
+                        <td><span class="badge approved">Approved</span></td>
+                        <td>95%</td>
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>CS102</td>
+                        <td>Ms. Sara</td>
+                        <td>02-May-2025</td>
+                        <td><span class="badge pending">Under Review</span></td>
+                        <td>85%</td>
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>CS103</td>
+                        <td>Mr. Amir</td>
+                        <td>03-May-2025</td>
+                        <td><span class="badge rejected">Rejected</span></td>
+                        <td>50%</td>
+                        <td><button>Resubmit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

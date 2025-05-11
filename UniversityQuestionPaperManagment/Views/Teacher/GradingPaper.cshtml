@@ -1,0 +1,169 @@
+﻿@{
+    ViewBag.Title = "gradingpaper";
+    Layout = "~/Views/Shared/_TeacherInnerLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grading - SmartAssessPro</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 30px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        aside {
+            width: 220px;
+            background-color: #2c3e50;
+            min-height: 100vh;
+            color: white;
+            padding-top: 30px;
+        }
+
+            aside nav a {
+                display: block;
+                color: white;
+                padding: 12px 20px;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+                aside nav a:hover, aside nav a.active {
+                    background-color: #1abc9c;
+                }
+
+        main {
+            flex: 1;
+            padding: 30px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f1f1;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-approve {
+            background-color: #28a745;
+        }
+
+        .btn-reject {
+            background-color: #dc3545;
+        }
+
+        .status-approved {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-pending {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .status-rejected {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <main>
+            <h2>Paper Grading Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Roll No</th>
+                        <th>Course</th>
+                        <th>Marks Obtained</th>
+                        <th>Total Marks</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ali Khan</td>
+                        <td>FA20-CS-001</td>
+                        <td>Web Development</td>
+                        <td>85</td>
+                        <td>100</td>
+                        <td class="status-approved">Approved</td>
+                        <td>
+                            <button class="btn btn-approve">Approve</button>
+                            <button class="btn btn-reject">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sana Malik</td>
+                        <td>FA20-CS-045</td>
+                        <td>AI & ML</td>
+                        <td>76</td>
+                        <td>100</td>
+                        <td class="status-pending">Pending</td>
+                        <td>
+                            <button class="btn btn-approve">Approve</button>
+                            <button class="btn btn-reject">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Usman Tariq</td>
+                        <td>FA20-CS-033</td>
+                        <td>Data Structures</td>
+                        <td>68</td>
+                        <td>100</td>
+                        <td class="status-rejected">Rejected</td>
+                        <td>
+                            <button class="btn btn-approve">Approve</button>
+                            <button class="btn btn-reject">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

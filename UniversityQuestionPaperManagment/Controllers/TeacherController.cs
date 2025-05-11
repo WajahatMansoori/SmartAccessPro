@@ -18,5 +18,15 @@ namespace UniversityQuestionPaperManagment.Controllers
         {
             return View();
         }
+
+        public ActionResult GradingPaper()
+        {
+            return View();
+        }
+
+        public ActionResult PaperStatus()
+        {
+            return View();
+        }
     }
 }

@@ -173,6 +173,8 @@
     <Content Include="Views\Shared\_TeacherLayout.cshtml" />
     <Content Include="Views\Teacher\CourseList.cshtml" />
     <Content Include="Views\Shared\_TeacherInnerLayout.cshtml" />
+    <Content Include="Views\Teacher\GradingPaper.cshtml" />
+    <Content Include="Views\Teacher\PaperStatus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
