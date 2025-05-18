@@ -145,7 +145,6 @@ D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionP
 D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionPaperManagment\bin\Newtonsoft.Json.xml
 D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionPaperManagment\bin\Antlr3.Runtime.pdb
 D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionPaperManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionPaperManagment\obj\Debug\UniversityQuestionPaperManagment.csprojAssemblyReference.cache
 D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionPaperManagment\obj\Debug\UniversityQuestionPaperManagment.csproj.CoreCompileInputs.cache
 D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionPaperManagment\obj\Debug\UniversityQuestionPaperManagment.csproj.CopyComplete
 D:\Work\C# Project\MVC\Git\UniversityQuestionPaperManagement\UniversityQuestionPaperManagment\obj\Debug\UniversityQuestionPaperManagment.dll

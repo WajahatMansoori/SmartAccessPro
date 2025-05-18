@@ -6,14 +6,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UniversityQuestionPaperManagment.AuthMiddleWare;
 using UniversityQuestionPaperManagment.Models;
 
 namespace UniversityQuestionPaperManagment.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController : BaseController
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
         // GET: Admin
+        [CustomAuthorize(UserRole = "Admin")]
         public ActionResult Dashboard()
         {
             //call Dashboard function to set the data dynimically
